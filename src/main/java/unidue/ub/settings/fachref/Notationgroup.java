@@ -14,73 +14,54 @@ import javax.persistence.Id;
 public class Notationgroup {
 
 	@Id
-	private String subjectID;
+	private String notationgroupName;
 
 	@Column(columnDefinition = "TEXT")
     private String description;
 
-    private String notations;
-	
-	/**
-	 * returns the subject ID
-	 * 
-	 * @return subjectID the Id of the subject represented by the range of notations
-	 */
-	public String getSubjectID() {
-		return subjectID;
+    private String notationsStart;
+
+    private String notationsEnd;
+
+	public String getNotationgroupName() {
+		return notationgroupName;
 	}
 
-	/**
-	 * sets the subject ID
-	 * 
-	 * @param subjectID the Id of the subject represented by the range of notations
-	 * @return Notationgroup the updated <code>Notationgroup</code>-object
-	 */
-	public Notationgroup setSubjectID(String subjectID) {
-		this.subjectID = subjectID;
-		return this;
+	public String type;
+
+	public void setNotationgroupName(String notationgroupName) {
+		this.notationgroupName = notationgroupName;
 	}
 
-	/**
-	 * returns the description
-	 * 
-	 * @return description the description of the range of notations
-	 */
 	public String getDescription() {
 		return description;
 	}
 
-	/**
-	 * sets the description
-	 * 
-	 * @param description the description of the range of notations
-	 * @return Notationgroup the updated <code>Notationgroup</code>-object
-	 */
-	public Notationgroup setDescription(String description) {
+	public void setDescription(String description) {
 		this.description = description;
-		return this;
 	}
 
-	/**
-	 * returns the notations
-	 * 
-	 * @return notations the range of notations
-	 */
-	public String getNotations() {
-		return notations;
+	public String getNotationsStart() {
+		return notationsStart;
 	}
 
-	/**
-	 * sets the notations
-	 * 
-	 * @param notations the range of notations
-	 * @return Notationgroup the updated <code>Notationgroup</code>-object
-	 */
-	public Notationgroup setNotations(String notations) {
-		this.notations = notations;
-		return this;
+	public void setNotationsStart(String notationsStart) {
+		this.notationsStart = notationsStart;
 	}
 
-	
+	public String getNotationsEnd() {
+		return notationsEnd;
+	}
 
+	public void setNotationsEnd(String notationsEnd) {
+		this.notationsEnd = notationsEnd;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
 }
