@@ -17,8 +17,6 @@ public class Stockcontrol {
     @Column(unique=true)
     private String identifier;
 
-    private String username;
-
     private String description;
 
     private String subjectID;
@@ -167,14 +165,6 @@ public class Stockcontrol {
 
     public void setGroupedAnalysis(Boolean groupedAnalysis) {
         this.groupedAnalysis = groupedAnalysis;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getStatus() {
