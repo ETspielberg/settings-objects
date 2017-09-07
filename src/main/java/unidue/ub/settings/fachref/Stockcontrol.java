@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.Date;
 
 /**
  * Created by Eike on 22.06.2017.
@@ -46,6 +47,10 @@ public class Stockcontrol {
     private Boolean groupedAnalysis;
 
     private String status;
+
+    private Date created;
+
+    private Date lastRun;
 
     public String getDescription() {
         return description;
@@ -173,5 +178,21 @@ public class Stockcontrol {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+
+    public Date getLastRun() {
+        return lastRun;
+    }
+
+    public void setLastRun(Date lastRun) {
+        this.lastRun = lastRun;
     }
 }

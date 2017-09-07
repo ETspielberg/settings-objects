@@ -1,15 +1,14 @@
 package unidue.ub.settings.fachref;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-import javax.persistence.*;
-import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class UserCategory {
+public class ItemCategory {
 
     @Id
+    @Column(unique=true)
     private String name;
 
     @Column(columnDefinition = "TEXT")

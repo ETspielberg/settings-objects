@@ -6,12 +6,13 @@ import javax.persistence.*;
 
 @Entity
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class UserGroup {
+public class ItemGroup {
 
     @Id
+    @Column(unique = true)
     private String name;
 
-    private String[] userCategories;
+    private String[] itemCategories;
 
     @Column(columnDefinition = "TEXT")
     private String description;
@@ -26,12 +27,12 @@ public class UserGroup {
         this.name = name;
     }
 
-    public String[] getUserCategories() {
-        return userCategories;
+    public String[] getItemCategories() {
+        return itemCategories;
     }
 
-    public void setUserCategories(String[] userCategories) {
-        this.userCategories = userCategories;
+    public void setItemcategories(String[] itemCategories) {
+        this.itemCategories = itemCategories;
     }
 
     public String getDescription() {
@@ -42,14 +43,14 @@ public class UserGroup {
         this.description = description;
     }
 
-    public String getUserCategoriesAsString() {
-        String userCategoriesAsString = "";
-        if (userCategories != null){
-            for (String userCategory : userCategories) {
-                userCategoriesAsString += userCategory + " ";
+    public String getItemCategoriesAsString() {
+        String itemCategoriesAsString = "";
+        if (itemCategories != null) {
+            for (String itemCategory : itemCategories) {
+                itemCategoriesAsString += itemCategory + " ";
             }
         }
-        return userCategoriesAsString.trim();
+        return itemCategoriesAsString.trim();
     }
 
     public boolean isRelevantForAnalysis() {
