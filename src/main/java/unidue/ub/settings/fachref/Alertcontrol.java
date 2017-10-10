@@ -8,7 +8,7 @@ import javax.persistence.Id;
  * Created by Eike on 08.07.2017.
  */
 @Entity
-public class Alertcontrol {
+public class Alertcontrol extends Profile{
 
     @Id
     @Column(unique=true)

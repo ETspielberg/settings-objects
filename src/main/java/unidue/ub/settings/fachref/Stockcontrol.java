@@ -12,7 +12,7 @@ import java.util.Date;
  */
 @Entity
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Stockcontrol {
+public class Stockcontrol extends Profile{
 
     @Id
     @Column(unique=true)
