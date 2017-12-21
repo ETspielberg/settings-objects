@@ -17,9 +17,6 @@ import java.util.Date;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @XmlRootElement(name="sushiprovider")
 public class Sushiprovider extends Profile {
-    
-    @Id
-    private String identifier;
 
     private String name;
     
@@ -36,12 +33,6 @@ public class Sushiprovider extends Profile {
     private String sushiCustomerReferenceName;
     
     private int sushiRelease;
-
-    private String status;
-
-    private Date created;
-
-    private Date lastRun;
     
     public Sushiprovider() {
         name = "";
@@ -52,41 +43,7 @@ public class Sushiprovider extends Profile {
         sushiCustomerReferenceID = "";
         sushiCustomerReferenceName = "";
         sushiRelease = 4;
-        created = new Date();
-        status = "created";
     }
-
-	public String getIdentifier() {
-		return identifier;
-	}
-
-	public void setIdentifier(String identifier) {
-		this.identifier = identifier;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
-	public Date getCreated() {
-		return created;
-	}
-
-	public void setCreated(Date created) {
-		this.created = created;
-	}
-
-	public Date getLastRun() {
-		return lastRun;
-	}
-
-	public void setLastRun(Date lastRun) {
-		this.lastRun = lastRun;
-	}
 
 	/**
 	 * returns the name of the SUSHI provider

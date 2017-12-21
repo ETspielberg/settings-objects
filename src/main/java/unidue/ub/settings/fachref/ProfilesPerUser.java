@@ -8,7 +8,7 @@ import javax.persistence.Id;
  * Created by Eike on 05.07.2017.
  */
 @Entity
-public class StockcontrolUser {
+public class ProfilesPerUser {
 
     @Id
     @GeneratedValue

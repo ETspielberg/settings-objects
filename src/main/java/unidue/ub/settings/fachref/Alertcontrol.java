@@ -10,26 +10,18 @@ import javax.persistence.Id;
 @Entity
 public class Alertcontrol extends Profile{
 
-    @Id
-    @Column(unique=true)
-    private String identifier;
-
-    private String username;
-
     @Column(columnDefinition = "TEXT")
     private String description;
 
     private String notationgroup;
 
-    private boolean performAlert;
+    private double thresholdRatio;
 
-    private boolean performReader;
-
-    private Double thresholdReader;
-
-    private Double thresholdAlert;
+    private int thresholdRequests;
 
     private int thresholdDuration;
+
+    private long timeperiod;
 
     public String getIdentifier() {
         return identifier;
@@ -37,14 +29,6 @@ public class Alertcontrol extends Profile{
 
     public void setIdentifier(String identifier) {
         this.identifier = identifier;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getNotationgroup() {
@@ -63,36 +47,20 @@ public class Alertcontrol extends Profile{
         this.notationgroup = notationgroup;
     }
 
-    public boolean isPerformAlert() {
-        return performAlert;
+    public double thresholdRatio() {
+        return thresholdRatio;
     }
 
-    public void setPerformAlert(boolean performAlert) {
-        this.performAlert = performAlert;
+    public void setThresholdRatio(Double thresholdRatio) {
+        this.thresholdRatio = thresholdRatio;
     }
 
-    public boolean isPerformReader() {
-        return performReader;
+    public int getThresholdRequests() {
+        return thresholdRequests;
     }
 
-    public void setPerformReader(boolean performReader) {
-        this.performReader = performReader;
-    }
-
-    public Double getThresholdReader() {
-        return thresholdReader;
-    }
-
-    public void setThresholdReader(Double thresholdReader) {
-        this.thresholdReader = thresholdReader;
-    }
-
-    public Double getThresholdAlert() {
-        return thresholdAlert;
-    }
-
-    public void setThresholdAlert(Double thresholdAlert) {
-        this.thresholdAlert = thresholdAlert;
+    public void setThresholdRequests(int thresholdRequests) {
+        this.thresholdRequests = thresholdRequests;
     }
 
     public int getThresholdDuration() {
@@ -101,5 +69,21 @@ public class Alertcontrol extends Profile{
 
     public void setThresholdDuration(int thresholdDuration) {
         this.thresholdDuration = thresholdDuration;
+    }
+
+    public double getThresholdRatio() {
+        return thresholdRatio;
+    }
+
+    public void setThresholdRatio(double thresholdRatio) {
+        this.thresholdRatio = thresholdRatio;
+    }
+
+    public long getTimeperiod() {
+        return timeperiod;
+    }
+
+    public void setTimeperiod(long timeperiod) {
+        this.timeperiod = timeperiod;
     }
 }

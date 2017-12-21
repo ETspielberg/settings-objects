@@ -5,52 +5,43 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.util.Date;
 
 /**
  * Created by Eike on 22.06.2017.
  */
 @Entity
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Stockcontrol extends Profile{
+public class Stockcontrol extends Profile {
 
-    @Id
-    @Column(unique=true)
-    private String identifier;
+    private String description = "";
 
-    private String description;
+    private String subjectID ="";
 
-    private String subjectID;
+    private String systemCode="";
 
-    private String systemCode;
+    private String collections="";
 
-    private String collections;
+    private String materials="";
 
-    private String materials;
+    private int yearsToAverage=0;
 
-    private Integer yearsToAverage;
+    private int minimumYears=0;
 
-    private Integer minimumYears;
+    private double staticBuffer=0.0;
 
-    private Double staticBuffer;
+    private double variableBuffer=0.0;
 
-    private Double variableBuffer;
+    private String deletionMailBcc="";
 
-    private String deletionMailBcc;
+    private int yearsOfRequests=0;
 
-    private Integer yearsOfRequests;
+    private int minimumDaysOfRequest=0;
 
-    private Integer minimumDaysOfRequest;
+    private double blacklistExpire=0.0;
 
-    private Double blacklistExpire;
-
-    private Boolean groupedAnalysis;
-
-    private String status;
-
-    private Date created;
-
-    private Date lastRun;
+    private boolean groupedAnalysis=false;
+    
+    private boolean persistEmptyAnalysis=false;
 
     public String getDescription() {
         return description;
@@ -92,35 +83,35 @@ public class Stockcontrol extends Profile{
         this.materials = materials.trim();
     }
 
-    public Integer getYearsToAverage() {
+    public int getYearsToAverage() {
         return yearsToAverage;
     }
 
-    public void setYearsToAverage(Integer yearsToAverage) {
+    public void setYearsToAverage(int yearsToAverage) {
         this.yearsToAverage = yearsToAverage;
     }
 
-    public Integer getMinimumYears() {
+    public int getMinimumYears() {
         return minimumYears;
     }
 
-    public void setMinimumYears(Integer minimumYears) {
+    public void setMinimumYears(int minimumYears) {
         this.minimumYears = minimumYears;
     }
 
-    public Double getStaticBuffer() {
+    public double getStaticBuffer() {
         return staticBuffer;
     }
 
-    public void setStaticBuffer(Double staticBuffer) {
+    public void setStaticBuffer(double staticBuffer) {
         this.staticBuffer = staticBuffer;
     }
 
-    public Double getVariableBuffer() {
+    public double getVariableBuffer() {
         return variableBuffer;
     }
 
-    public void setVariableBuffer(Double variableBuffer) {
+    public void setVariableBuffer(double variableBuffer) {
         this.variableBuffer = variableBuffer;
     }
 
@@ -140,59 +131,43 @@ public class Stockcontrol extends Profile{
         this.identifier = identifier.trim();
     }
 
-    public Integer getYearsOfRequests() {
+    public int getYearsOfRequests() {
         return yearsOfRequests;
     }
 
-    public void setYearsOfRequests(Integer yearsOfRequests) {
+    public void setYearsOfRequests(int yearsOfRequests) {
         this.yearsOfRequests = yearsOfRequests;
     }
 
-    public Integer getMinimumDaysOfRequest() {
+    public int getMinimumDaysOfRequest() {
         return minimumDaysOfRequest;
     }
 
-    public void setMinimumDaysOfRequest(Integer minimumDaysOfRequest) {
+    public void setMinimumDaysOfRequest(int minimumDaysOfRequest) {
         this.minimumDaysOfRequest = minimumDaysOfRequest;
     }
 
-    public Double getBlacklistExpire() {
+    public double getBlacklistExpire() {
         return blacklistExpire;
     }
 
-    public void setBlacklistExpire(Double blacklistExpire) {
+    public void setBlacklistExpire(double blacklistExpire) {
         this.blacklistExpire = blacklistExpire;
     }
 
-    public Boolean isGroupedAnalysis() {
+    public boolean isGroupedAnalysis() {
         return groupedAnalysis;
     }
 
-    public void setGroupedAnalysis(Boolean groupedAnalysis) {
+    public void setGroupedAnalysis(boolean groupedAnalysis) {
         this.groupedAnalysis = groupedAnalysis;
     }
 
-    public String getStatus() {
-        return status;
+    public boolean isPersistEmptyAnalysis() {
+        return persistEmptyAnalysis;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public Date getCreated() {
-        return created;
-    }
-
-    public void setCreated(Date created) {
-        this.created = created;
-    }
-
-    public Date getLastRun() {
-        return lastRun;
-    }
-
-    public void setLastRun(Date lastRun) {
-        this.lastRun = lastRun;
+    public void setPersistEmptyAnalysis(boolean persistEmptyAnalysis) {
+        this.persistEmptyAnalysis = persistEmptyAnalysis;
     }
 }

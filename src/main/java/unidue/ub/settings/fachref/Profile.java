@@ -1,20 +1,36 @@
 package unidue.ub.settings.fachref;
 
-import java.util.Date;
+import javax.persistence.*;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
+@Entity
 public abstract class Profile {
 
-    private String identifier;
+    @Id
+    @Column(unique=true)
+    String identifier;
 
-    private String status;
+    @Enumerated(EnumType.STRING)
+    Status status = Status.CREATED;
 
-    private Date lastrun;
+    Timestamp lastrun;
 
-    public Date getLastrun() {
+    Timestamp created = Timestamp.valueOf(LocalDateTime.now());
+
+    public Timestamp getCreated() {
+        return created;
+    }
+
+    public void setCreated(Timestamp created) {
+        this.created = created;
+    }
+
+    public Timestamp getLastrun() {
         return lastrun;
     }
 
-    public void setLastrun(Date lastrun) {
+    public void setLastrun(Timestamp lastrun) {
         this.lastrun = lastrun;
     }
 
@@ -26,11 +42,11 @@ public abstract class Profile {
         this.identifier = identifier;
     }
 
-    public String getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 }
