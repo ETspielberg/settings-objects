@@ -11,7 +11,6 @@ import javax.persistence.Id;
 public class Usersettings {
 
     @Id
-    @Column(unique=true)
     private String username;
 
     private String fullname;
