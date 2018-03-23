@@ -8,5 +8,6 @@ public enum Status {
     FINALCHECKED,
     FINISHED,
     ERROR,
-    CANCELED
+    CANCELED,
+    OBSOLETE
 }
