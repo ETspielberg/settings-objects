@@ -33,6 +33,8 @@ public class Sushiprovider extends Profile {
     private String sushiCustomerReferenceName;
     
     private int sushiRelease;
+
+    private String reportTypes;
     
     public Sushiprovider() {
         name = "";
@@ -43,6 +45,7 @@ public class Sushiprovider extends Profile {
         sushiCustomerReferenceID = "";
         sushiCustomerReferenceName = "";
         sushiRelease = 4;
+        reportTypes = "JR1 BR2";
     }
 
 	/**
@@ -172,4 +175,12 @@ public class Sushiprovider extends Profile {
 	public void setSushiCustomerReferenceName(String sushiCustomerReferenceName) {
         this.sushiCustomerReferenceName = sushiCustomerReferenceName;
     }
+
+	public String getReportTypes() {
+		return reportTypes;
+	}
+
+	public void setReportTypes(String reportTypes) {
+		this.reportTypes = reportTypes;
+	}
 }
