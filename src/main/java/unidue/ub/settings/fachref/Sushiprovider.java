@@ -3,10 +3,7 @@ package unidue.ub.settings.fachref;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.Date;
 
 /**
  * Plain Old Java Object as representation of a SUSHI provider with all the necessary data to retrieve the reports.
@@ -15,7 +12,6 @@ import java.util.Date;
  */
 @Entity
 @JsonIgnoreProperties(ignoreUnknown = true)
-@XmlRootElement(name="sushiprovider")
 public class Sushiprovider extends Profile {
 
     private String name;
