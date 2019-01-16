@@ -3,7 +3,6 @@ package unidue.ub.settings.fachref;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.Entity;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Plain Old Java Object as representation of a SUSHI provider with all the necessary data to retrieve the reports.
