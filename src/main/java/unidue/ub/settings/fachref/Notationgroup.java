@@ -23,6 +23,16 @@ public class Notationgroup {
 
     private String notationsEnd;
 
+    private String elisaMail;
+
+	public String getElisaMail() {
+		return elisaMail;
+	}
+
+	public void setElisaMail(String elisaMail) {
+		this.elisaMail = elisaMail;
+	}
+
 	public String getNotationgroupName() {
 		return notationgroupName;
 	}
