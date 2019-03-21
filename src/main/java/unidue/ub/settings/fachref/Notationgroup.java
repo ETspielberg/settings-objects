@@ -14,15 +14,19 @@ import javax.persistence.Id;
 public class Notationgroup {
 
 	@Id
+	@Column(name="notationgroup_name")
 	private String notationgroupName;
 
 	@Column(columnDefinition = "TEXT")
     private String description;
 
+	@Column(name="notation_start")
     private String notationsStart;
 
+	@Column(name="notation_end")
     private String notationsEnd;
 
+	@Column(name="elisa_mail")
     private String elisaMail;
 
 	public String getElisaMail() {
