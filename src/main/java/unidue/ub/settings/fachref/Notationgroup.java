@@ -20,10 +20,10 @@ public class Notationgroup {
 	@Column(columnDefinition = "TEXT")
     private String description;
 
-	@Column(name="notation_start")
+	@Column(name="notations_start")
     private String notationsStart;
 
-	@Column(name="notation_end")
+	@Column(name="notations_end")
     private String notationsEnd;
 
 	@Column(name="elisa_mail")
